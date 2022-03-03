@@ -1,5 +1,6 @@
 from vtk import vtkRenderer, vtkRenderWindow, vtkRenderWindowInteractor, vtkNamedColors, vtkPolyDataMapper, vtkActor
 import matplotlib.pyplot as plt
+from IO_mesh import IOMesh
 
 
 # ---Mesh Generation---
@@ -129,3 +130,12 @@ def show_loss(training_loss, validation_loss):
     plt.legend()
     ax.set_title('KL loss history', color='white')
     plt.show()
+
+if __name__=='__main__':
+
+    iomesh = IOMesh()
+    model = iomesh.read_mesh(r'C:\Users\mm18\PycharmProjects\DeepShapeAnalysis\Data\GeneratedMeshes\Meshes\mesh_00002.vtk')
+    vis = Visualisation(model)
+    vis.show_mesh()
+
+    

@@ -278,4 +278,4 @@ if __name__ == '__main__':
 
     tv = TransformedVentricle(iv.template_ventricle_elements, iv.template_ventricle_mesh,
                               output_folder=r'Data/GeneratedMeshes')
-    tv.generate_meshes(n=10000)
+    tv.generate_meshes(n=10)
